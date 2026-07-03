@@ -27,8 +27,8 @@ keyboard.on_press_key("esc", stop_program)
 while bom:
     try:
         listening = False
-        obj = str(input(CYAN + "\n cosa vuoi stampare: \n" + RESET))
-        a = input(CYAN + "\n quanto tempo deve esserci tra una stampa e l'altra? (secondi)\n" + RESET)
+        obj = str(input(CYAN + "\n what do you want to print: \n" + RESET))
+        a = input(CYAN + "\n how much time should pass from a font rint to another (expressed in seconds, recommended range: 0.1-2\n" + RESET)
         listening = True
 
         for f in pyfiglet.FigletFont.getFonts():
@@ -39,9 +39,9 @@ while bom:
             time.sleep(float(a))
 
     except:
-        print("Errore...", end="")
+        print("Error...", end="")
         time.sleep(3)
-        print(" riprovando...", end="")
+        print(" trying again...", end="")
         time.sleep(5)
         os.system("cls" )
         os.system("pip install pyfiglet")
@@ -50,4 +50,4 @@ while bom:
             import pyfiglet
             import keyboard
         except:
-            print(" \n errore fatale del programma, impossibile importare pyfiglet, riavviare il programma o provare ad installlare pyfiglet manualmente")
+            print(" \n fatal error of the program, unable to solve bugs or install libraries properly for the script to start normally, please press 'esc' or restart this program")
